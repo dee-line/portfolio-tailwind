@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十全特好食品 - Dee Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'accent-blue': '#06f',
+            'text-dark': '#1E2939',
+            'text-gray': '#6B717E',
+          },
+          fontFamily: {
+            'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+            'roboto': ['Roboto', 'sans-serif'],
+            'sf': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white font-bricolage">
+
+  <div class="max-w-[1440px] mx-auto px-7 md:px-[70px] pt-6 md:pt-[50px] pb-[200px] md:pb-[120px] flex flex-col">
+    <!-- Back Button (Top) -->
+    <a href="index.html#works" class="inline-flex items-center gap-2 self-start hover:opacity-70 transition-opacity">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M10 4L4 10" stroke="#06f" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 10L10 16" stroke="#06f" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 10H17" stroke="#06f" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="text-[16px] font-semibold underline text-[#202020]">Back to Projects</span>
+    </a>
+
+    <!-- Project Info -->
+    <div class="mt-6 md:mt-[50px] flex flex-col gap-[24px]">
+      <!-- Title -->
+      <h1 class="text-[30px] md:text-[32px] font-light leading-[30px] md:leading-[38px] text-black">十全特好食品-官方網站</h1>
+
+      <!-- Details -->
+      <div class="flex flex-col gap-5">
+        <!-- Description -->
+        <p class="text-[16px] md:text-[20px] font-sf font-light leading-[26px] md:leading-[30px] tracking-[1px] text-text-gray">
+          十全食品原有的品牌官網與電商系統各自獨立運作，導致數據斷層、消費路徑冗長、操作體驗不一致等問題。本次專案將兩者整合為單一平台，同時納入會員系統、購物車、合作夥伴平台及業績總覽功能，打造一站式品牌體驗。
+        </p>
+
+        <!-- Project Type -->
+        <div class="flex items-center gap-5">
+          <span class="text-[18px] font-roboto font-medium leading-[21px] text-black">專案類型</span>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-4 py-[7px] border border-black rounded-lg text-[16px] font-roboto font-normal leading-[21px] text-black">網站設計</span>
+            <span class="px-4 py-[7px] border border-black rounded-lg text-[16px] font-roboto font-normal leading-[21px] text-black">UIUX</span>
+                      <span class="px-4 py-[7px] border border-black rounded-lg text-[16px] font-roboto font-normal leading-[21px] text-black">AI Workflow</span>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="flex items-center gap-5">
+          <span class="text-[18px] font-roboto font-medium leading-[21px] text-black">連結</span>
+          <div class="flex flex-wrap items-center gap-2">
+            <a href="https://shih-chuan.com.tw/zh" target="_blank" class="px-4 py-[7px] border border-black rounded-lg text-[16px] font-roboto font-normal leading-[21px] text-black hover:bg-black hover:text-white transition-colors">官方網站</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Detail Image -->
+    <div class="mt-6 md:mt-[50px]">
+      <img src="image/work001-b.jpg" alt="十全特好食品 Detail" class="w-full h-auto">
+    </div>
+
+    <!-- Back Button (Bottom) -->
+    <div class="mt-[60px] md:mt-[120px] flex flex-col items-center gap-2">
+      <a href="index.html#works" class="flex flex-col items-center gap-2 hover:opacity-70 transition-opacity">
+        <svg width="40" height="40" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4L4 10" stroke="#06f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M4 10L10 16" stroke="#06f" stroke-width="4" stroke-linecap="round"/>
+          <path d="M4 10H17" stroke="#06f" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="text-[20px] md:text-[32px] font-semibold leading-[28px] md:leading-[42px] text-center underline text-[#202020]">
+          Back to Projects<br>Thank you for viewing.
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Character Illustration - Fixed Bottom Right -->
+  <a href="mailto:de0933@gmail.com" class="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-50 hover:opacity-80 transition-opacity">
+    <img src="image/pic001.svg" alt="Character" class="w-auto h-auto max-w-[220px] md:max-w-[340px]">
+  </a>
+
+</body>
+</html>

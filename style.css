@@ -1,0 +1,426 @@
+/* ========================
+   Hero Section
+   ======================== */
+#about {
+  background: url('image/hero bg.png') repeat, #FEF7F6;
+}
+
+/* ========================
+   Draggable Cards - Shared
+   ======================== */
+.draggable-card {
+  cursor: grab;
+}
+
+/* ========================
+   Draggable Cards - Individual Positions
+   ======================== */
+.card-ekk {
+  top: -6%;
+  left: -12%;
+  transform: scaleX(-1);
+}
+
+.card-rectangular {
+  top: 86%;
+  left: 55.6%;
+}
+
+.card-notes {
+  top: 21%;
+  left: 90.3%;
+}
+
+.card-browser {
+  top: 36%;
+  left: 70.5%;
+  transform: rotate(4deg);
+  width: 550px;
+}
+
+.card-dm {
+  top: 98%;
+  left: 40%;
+  transform: rotate(-4.35deg);
+  width: 530px;
+}
+
+.card-logo {
+  top: 76.5%;
+  left: 62%;
+  transform: rotate(5.97deg);
+  width: 180px;
+  height: auto;
+}
+
+.card-cursor {
+  top: 18%;
+  left: 65%;
+}
+
+.card-emoji-laugh {
+  top: 6%;
+  left: 79.7%;
+  transform: rotate(45deg);
+}
+
+.card-emoji-smile {
+  top: 85%;
+  left: 54%;
+  transform: rotate(-3deg);
+}
+
+.card-drag-indicator {
+  top: -5%;
+  left: 95%;
+}
+
+.card-yellow {
+  top: 100%;
+  left: 45%;
+  transform: rotate(-8deg);
+}
+
+.card-mywork {
+  top: 102%;
+  left: 43%;
+  transform: rotate(6deg);
+}
+
+/* ========================
+   Browser Window Mockup
+   ======================== */
+.browser-window {
+  background: white;
+  border: 0.8px solid #62CD70;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.browser-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border-bottom: 0.8px solid #62CD70;
+}
+
+.browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 0.8px solid #62CD70;
+  display: inline-block;
+}
+
+.browser-spacer {
+  flex: 1;
+}
+
+.browser-content {
+  width: 1000px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================
+   Dee Cursor Badge
+   ======================== */
+.cursor-badge-arrow {
+  margin-right: -4px;
+  margin-bottom: -2px;
+}
+
+.cursor-badge-label {
+  background: #FB8EFA;
+  border-radius: 3.5px;
+  padding: 3px 8px;
+}
+
+.cursor-badge-text {
+  font-size: 16px;
+  color: white;
+}
+
+/* ========================
+   Drag To Move Indicator
+   ======================== */
+.drag-indicator-box {
+  position: relative;
+  border: 3px solid #947EFB;
+  padding: 12px;
+}
+
+.drag-indicator-handle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #947EFB;
+}
+
+.drag-indicator-handle--tl {
+  top: -8px;
+  left: -8px;
+}
+
+.drag-indicator-handle--tr {
+  top: -8px;
+  right: -8px;
+}
+
+.drag-indicator-handle--bl {
+  bottom: -8px;
+  left: -8px;
+}
+
+.drag-indicator-handle--br {
+  bottom: -8px;
+  right: -8px;
+}
+
+.drag-indicator-text {
+  font-size: 16px;
+  color: #1E2939;
+  white-space: nowrap;
+}
+
+/* ========================
+   Scroll Reveal Animation
+   ======================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================
+   Override Tailwind md:pb-[100px]
+   ======================== */
+@media (min-width: 768px) {
+  .md\:pb-\[100px\] {
+    padding-bottom: 140px;
+  }
+}
+
+/* ========================
+   Responsive - 1530px+
+   ======================== */
+@media (min-width: 1531px) {
+  #hero-content {
+    max-width: 900px;
+  }
+
+  #hero-content h1 {
+    font-size: 96px;
+    line-height: 1em;
+  }
+}
+
+/* ========================
+   Responsive - 1530px ~ 1190px
+   ======================== */
+@media (max-width: 1530px) and (min-width: 1190px) {
+  .card-cursor {
+    top: 20%;
+    left: 72%;
+  }
+
+  .card-browser {
+    top: 41%;
+    left: 69%;
+  }
+
+  .card-logo {
+    top: 77%;
+    left: 61%;
+    width: 160px;
+  }
+
+  .card-dm {
+    top: 97%;
+    width: 450px;
+  }
+
+  .card-emoji-smile {
+    left: 56%;
+    font-size: 30px;
+  }
+
+  .card-emoji-laugh {
+    left: 75%;
+    font-size: 40px;
+  }
+
+  .card-drag-indicator {
+    left: 88%;
+  }
+
+  .card-notes {
+    top: 31%;
+  }
+
+  #hero-content {
+    max-width: 700px;
+  }
+
+  #hero-content h1 {
+    font-size: 80px;
+    line-height: 1em;
+  }
+}
+
+/* ========================
+   Responsive - 1189px以下
+   ======================== */
+@media (max-width: 1189px) {
+  .card-dm {
+    left: -21%;
+  }
+
+  .card-mywork {
+    top: 98%;
+    left: -4%;
+  }
+
+  .card-browser {
+    top: 77%;
+    left: 54%;
+    width: 450px;
+  }
+
+  .card-rectangular {
+    top: 95%;
+    left: 27%;
+  }
+
+  .card-emoji-smile {
+    top: 87%;
+    left: 31%;
+  }
+
+  .card-logo {
+    top: 110%;
+    left: 43%;
+    z-index: 11 !important;
+  }
+
+  .card-emoji-laugh {
+    top: -34%;
+    left: 76.7%;
+  }
+
+  .card-drag-indicator {
+    top: -15%;
+    left: 85%;
+  }
+
+  .card-notes {
+    top: -31%;
+  }
+
+  .card-cursor {
+    top: -5%;
+    left: 26%;
+  }
+
+  #hero-content h1 {
+    font-size: 80px;
+    line-height: 1em;
+  }
+}
+
+/* ========================
+   Responsive - 767px以下
+   ======================== */
+@media (max-width: 767px) {
+  .card-browser {
+    top: 143%;
+    left: 44%;
+    width: 450px;
+  }
+
+  .card-dm {
+    top: 202%;
+    left: -13%;
+    width: 470px;
+  }
+
+  .card-mywork {
+    top: 175%;
+    left: 2%;
+  }
+
+  .card-rectangular {
+    top: 185%;
+    left: 17%;
+  }
+
+  .card-ekk {
+    top: -16%;
+    left: -22%;
+  }
+
+  .card-emoji-smile {
+    top: 149%;
+    left: 27%;
+    transform: rotate(-8deg);
+  }
+
+  .card-drag-indicator {
+    top: 115%;
+    left: 72%;
+  }
+
+  .card-cursor {
+    top: 102%;
+    left: 31%;
+  }
+
+  .card-logo {
+    top: 168%;
+    left: 25%;
+    transform: rotate(6.97deg);
+    z-index: 1 !important;
+  }
+
+  .card-notes {
+    top: 128%;
+    left: 86.3%;
+  }
+
+  .card-emoji-laugh {
+    display: none !important;
+  }
+}
+
+/* ========================
+   Responsive - 500px以下
+   ======================== */
+@media (max-width: 500px) {
+  .card-rectangular {
+    display: none !important;
+  }
+
+  .card-mywork {
+    top: 149%;
+  }
+
+  .card-ekk {
+    top: -8%;
+    left: -35%;
+    max-width: 46%;
+  }
+
+  #hero-content h1 {
+    font-size: 47px;
+    line-height: 1em;
+  }
+}

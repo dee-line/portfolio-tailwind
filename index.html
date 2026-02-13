@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dee - UI/UX Designer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'accent-pink': '#FB8EFA',
+            'accent-blue': '#146EF5',
+            'accent-yellow': '#FFF25D',
+            'text-dark': '#1E2939',
+            'text-gray': '#6B717E',
+            'border-gray': '#F3F4F6',
+          },
+          fontFamily: {
+            'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+            'roboto': ['Roboto', 'sans-serif'],
+            'sf': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white font-bricolage relative m-0 p-0">
+
+  <!-- Navigation -->
+  <nav class="absolute top-0 left-0 right-0 z-50">
+    <div class="max-w-[1440px] mx-auto px-5 md:px-8 h-16 md:h-20 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="w-10 h-10 bg-black rounded flex items-center justify-center relative z-[60]">
+        <span class="text-white text-xl font-normal leading-7 text-center">D</span>
+      </div>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-10">
+        <a href="#projects" class="text-sm font-medium tracking-[0.7px] text-black hover:text-accent-blue transition-colors">PROJECTS</a>
+        <a href="#experience" class="text-sm font-medium tracking-[0.7px] text-black hover:text-accent-blue transition-colors">EXPERIENCE</a>
+        <a href="#contact" class="text-sm font-medium tracking-[0.7px] text-black hover:text-accent-blue transition-colors">CONTACT</a>
+      </div>
+      <!-- Hamburger Button (mobile/tablet) -->
+      <button id="hamburger-btn" class="md:hidden relative z-[60] w-10 h-10 flex flex-col justify-center items-center gap-[6px]" aria-label="Menu">
+        <span class="hamburger-line block w-6 h-[2px] bg-black transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-[2px] bg-black transition-all duration-300"></span>
+        <span class="hamburger-line block w-6 h-[2px] bg-black transition-all duration-300"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[55] flex flex-col items-center justify-center gap-10 transition-all duration-300 opacity-0 pointer-events-none" style="background: #146EF5;">
+    <a href="#projects" class="mobile-menu-link text-white text-3xl font-medium tracking-[1px]">PROJECTS</a>
+    <a href="#experience" class="mobile-menu-link text-white text-3xl font-medium tracking-[1px]">EXPERIENCE</a>
+    <a href="#contact" class="mobile-menu-link text-white text-3xl font-medium tracking-[1px]">CONTACT</a>
+  </div>
+
+  <!-- Hero Section (pq) -->
+  <section id="about" class="w-full h-screen overflow-hidden flex flex-col justify-start md:justify-center items-start px-7 md:px-[71.5px] pt-20 pb-10 md:pb-0">
+    <div id="hero-wrapper" class="max-w-[1440px] mx-auto w-full relative">
+    <!-- Draggable Decorative Elements -->
+
+    <!-- ekk image (left side, partially off-screen) -->
+    <img src="image/ekk0XlnOygglnIHWYDruVrstJNQ.avif" class="draggable-card card-ekk absolute z-[11] block w-[224px] h-[auto] object-cover select-none" draggable="false" alt="">
+
+    <!-- Pink vector blob -->
+    <img src="image/rectangular.svg" class="draggable-card card-rectangular absolute z-[1] block w-[126px] h-[auto] select-none" draggable="false" alt="">
+
+    <!-- Washi tape -->
+    <img src="image/notes.svg" class="draggable-card card-notes absolute z-[1] block select-none" draggable="false" alt="">
+
+    <!-- Browser window mockup -->
+    <div class="card-browser absolute z-[1] block select-none">
+      <div class="browser-window">
+        <div class="browser-toolbar">
+          <span class="browser-dot"></span>
+          <span class="browser-dot"></span>
+          <span class="browser-dot"></span>
+          <span class="browser-spacer"></span>
+        </div>
+        <img src="image/web2.png" class="browser-content" alt="黑松網站">
+      </div>
+    </div>
+
+    <!-- Generated image -->
+    <img src="image/DM.png" class="draggable-card card-dm absolute z-[2] block select-none rounded-lg" draggable="false" alt="">
+
+    <!-- Character illustration -->
+    <img src="image/logo.svg" class="draggable-card card-logo absolute z-[1] block select-none" draggable="false" alt="">
+
+    <!-- Dee cursor badge -->
+    <div class="draggable-card card-cursor absolute z-[1] flex items-end select-none">
+      <svg width="16" height="22" viewBox="0 0 16 22" fill="none" class="cursor-badge-arrow">
+        <path d="M1 1L1 18L4.5 13.5L8 22L10.5 21L7 13L12.5 13L1 1Z" fill="#FB8EFA" stroke="white" stroke-width="1.5"/>
+      </svg>
+      <div class="cursor-badge-label">
+        <span class="font-bricolage cursor-badge-text">Dee</span>
+      </div>
+    </div>
+
+    <!-- 🤣 emoji -->
+    <span class="draggable-card card-emoji-laugh absolute z-[1] block select-none text-[40px]">🤣</span>
+
+    <!-- 🙂 emoji -->
+    <span class="draggable-card card-emoji-smile absolute z-[1] block select-none text-[30px] md:text-[45px]">🙂</span>
+
+    <!-- Yellow SVG -->
+    <img src="image/yellow.svg" class="card-yellow absolute z-[0] hidden select-none" alt="">
+
+    <!-- My Work SVG -->
+    <img src="image/mywork.svg" class="draggable-card card-mywork absolute z-[1] block select-none" draggable="false" alt="">
+
+    <!-- "Drag To Move" selection indicator -->
+    <div class="draggable-card card-drag-indicator absolute z-[1] block select-none">
+      <div class="drag-indicator-box">
+        <div class="drag-indicator-handle drag-indicator-handle--tl"></div>
+        <div class="drag-indicator-handle drag-indicator-handle--tr"></div>
+        <div class="drag-indicator-handle drag-indicator-handle--bl"></div>
+        <div class="drag-indicator-handle drag-indicator-handle--br"></div>
+        <span class="font-bricolage font-semibold drag-indicator-text">Drag To Move</span>
+      </div>
+    </div>
+
+    <div id="hero-content" class="relative z-10 w-full md:max-w-[880px] flex flex-col gap-6 md:mt-[10px] md:pb-[100px]">
+      <!-- Top Row: Photo + Title + Tags (desktop) -->
+      <div class="flex flex-row items-center gap-4 md:gap-[27px] self-stretch">
+        <!-- Photo Frame -->
+        <div class="flex items-center shrink-0 relative">
+          <div class="w-[120px] md:w-[178px] rounded-[3px] -rotate-3 overflow-hidden">
+            <img src="image/profile.png" alt="Profile" class="w-full h-auto">
+          </div>
+        </div>
+
+        <!-- Title + Tags Group -->
+        <div class="flex flex-col gap-4">
+          <h1 class="text-[40px] md:text-[96px] font-light leading-[44px] md:leading-[96px] tracking-[-2px] md:tracking-[-4.8px] text-black">
+            Hello, I am Dee.
+          </h1>
+          <!-- Skill Tags (desktop only) -->
+          <div class="hidden md:flex gap-3">
+            <span class="px-4 py-2.5 bg-accent-pink rounded-lg text-s font-semibold font-roboto text-black">
+              UI/UX Design
+            </span>
+            <span class="px-4 py-2.5 bg-accent-blue rounded-lg text-s font-semibold font-roboto text-white">
+              Brand Design
+            </span>
+            <span class="px-4 py-2.5 bg-accent-yellow rounded-lg text-s font-semibold font-roboto text-black">
+              AI Workflow
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Tags (mobile only) -->
+      <div class="flex md:hidden gap-3">
+        <span class="px-4 py-2.5 bg-accent-pink rounded-lg text-s font-semibold font-roboto text-black">
+          UI/UX Design
+        </span>
+        <span class="px-4 py-2.5 bg-accent-blue rounded-lg text-s font-semibold font-roboto text-white">
+          Brand Design
+        </span>
+        <span class="px-4 py-2.5 bg-accent-yellow rounded-lg text-s font-semibold font-roboto text-black">
+          AI Workflow
+        </span>
+      </div>
+
+      <!-- Description -->
+      <div class="self-stretch">
+        <p class="text-[16px] md:text-[22px] font-sf font-light leading-[28px] md:leading-[38px] text-text-dark">
+          10+年經驗資深設計師，<span class="font-medium">專注於品牌與數位產品轉型</span>。現任經貿聯網科技資深設計。從金融大型網站到傳產品牌的視覺重塑，我致力於運用設計系統達成設計與開發的無縫對接，並透過 <span class="font-medium">AI 自動化工具</span> 最佳化設計流程。
+        </p>
+      </div>
+    </div>
+    </div><!-- End max-w-1440 wrapper -->
+  </section>
+
+  <!-- Works Section -->
+  <section id="projects" class="border-t border-border-gray py-[60px] md:py-[120px] px-7 md:px-[71.5px]">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-5">
+      <!-- Left Column: Text (1/4) -->
+      <div class="reveal flex flex-col gap-6">
+        <h2 class="text-[30px] md:text-[36px] font-light leading-[40px] md:leading-[45px] text-black">
+          I craft meaningful brand<br>experiences &amp;<br>digital products.
+        </h2>
+        <p class="text-[16px] md:text-[22px] font-sf font-light leading-6 md:leading-7 tracking-[1px] text-text-gray">
+          服務客戶橫跨金融產業與傳統產業，包含：十全食品、宜蘭餅、住商網站改版等等......
+        </p>
+      </div>
+
+      <!-- Right Column: Works Grid (3/4) -->
+      <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        <!-- Work 1: wide -->
+        <a href="work001.html" class="reveal aspect-square relative overflow-hidden block group rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:translate-x-[5px] hover:rotate-[2deg]" style="transition-delay: 0.1s">
+          <img src="image/work001.jpg" alt="十全特好食品" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-transparent group-hover:bg-[#06f]/30 transition-colors duration-300"></div>
+          <div class="absolute bottom-0 left-0 p-3 md:p-4 flex gap-2">
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">Website</span>
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">AI Workflow</span>
+          </div>
+        </a>
+
+        <!-- Work 2 -->
+        <a href="work002.html" class="reveal aspect-square relative overflow-hidden block group rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:translate-x-[5px] hover:rotate-[2deg]" style="transition-delay: 0.2s">
+          <img src="image/work002.jpg" alt="野村投信MY基金" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-transparent group-hover:bg-[#06f]/30 transition-colors duration-300"></div>
+          <div class="absolute bottom-0 left-0 p-3 md:p-4 flex gap-2">
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">APP</span>
+          </div>
+        </a>
+
+        <!-- Work 3 -->
+        <a href="work003.html" class="reveal aspect-square relative overflow-hidden block group rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:translate-x-[5px] hover:rotate-[2deg]" style="transition-delay: 0.3s">
+          <img src="image/work003.jpg" alt="哈囉租車" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-transparent group-hover:bg-[#06f]/30 transition-colors duration-300"></div>
+          <div class="absolute bottom-0 left-0 p-3 md:p-4 flex gap-2">
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">Website</span>
+          </div>
+        </a>
+
+        <!-- Work 4: wide -->
+        <a href="work004.html" class="reveal aspect-square relative overflow-hidden block group rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:translate-x-[5px] hover:rotate-[2deg]" style="transition-delay: 0.15s">
+          <img src="image/work004.jpg" alt="金控集團" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-transparent group-hover:bg-[#06f]/30 transition-colors duration-300"></div>
+          <div class="absolute bottom-0 left-0 p-3 md:p-4 flex gap-2">
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">Dashboard</span>
+          </div>
+        </a>
+
+        <!-- Work 5: wide -->
+        <a href="work005.html" class="reveal aspect-square relative overflow-hidden block group rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:translate-x-[5px] hover:rotate-[2deg]" style="transition-delay: 0.25s">
+          <img src="image/work005.jpg" alt="家樂福LINE@" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-transparent group-hover:bg-[#06f]/30 transition-colors duration-300"></div>
+          <div class="absolute bottom-0 left-0 p-3 md:p-4 flex gap-2">
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">Line@</span>
+          </div>
+        </a>
+
+        <!-- Work 6 -->
+        <a href="work006.html" class="reveal aspect-square relative overflow-hidden block group rounded-xl transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:translate-x-[5px] hover:rotate-[2deg]" style="transition-delay: 0.35s">
+          <img src="image/work006.jpg" alt="波波送點" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-transparent group-hover:bg-[#06f]/30 transition-colors duration-300"></div>
+          <div class="absolute bottom-0 left-0 p-3 md:p-4 flex gap-2">
+            <span class="px-4 py-1 bg-[#ffffff] rounded-full text-xs font-bold font-roboto text-black">Website</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="border-t border-border-gray py-[60px] md:py-[100px] px-7 md:px-[71.5px]">
+    <div class="max-w-[1440px] mx-auto flex flex-col items-start md:items-end gap-6">
+      <!-- Section Header -->
+      <div class="reveal flex items-center gap-2 self-stretch">
+        <span class="text-[30px] md:text-[36px] font-light leading-[40px] md:leading-[45px] text-text-dark">Years in the industry</span>
+        <span class="text-[18px] md:text-[26px] font-sf font-light leading-[22px] md:leading-[31px] text-text-gray">經歷</span>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full h-px bg-black self-stretch"></div>
+
+      <!-- Content Area -->
+      <div class="reveal flex flex-col items-start md:items-end gap-10 md:gap-[60px] self-stretch mt-6 md:mt-[56px]" style="transition-delay: 0.15s">
+        <!-- Experience List with Timeline -->
+        <div class="flex flex-col items-start md:items-end gap-12 self-stretch">
+          <div class="w-full lg:w-[848px] relative">
+            <!-- Vertical Line -->
+            <div class="absolute left-[4.5px] top-[15px] bottom-[15px] w-px bg-text-dark"></div>
+            <!-- Experience Items -->
+            <div class="flex flex-col gap-8 md:gap-[68px]">
+              <!-- Item 1: 2022-NOW -->
+              <div class="flex items-start md:items-center gap-4 md:gap-6">
+                <div class="w-[10px] h-[10px] rounded-full bg-accent-blue shrink-0 relative z-10 mt-2 md:mt-0"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-16 flex-1">
+                  <span class="text-[16px] md:text-[26px] font-normal leading-[20px] md:leading-[31px] text-black shrink-0">2022-NOW</span>
+                  <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 flex-1">
+                    <span class="md:w-[400px] text-[24px] md:text-[30px] font-sf font-light leading-[32px] md:leading-[40px] text-black md:shrink-0">經貿聯網科技股份有限公司</span>
+                    <span class="flex-1 md:text-right text-[20px] md:text-[26px] font-sf font-light leading-[28px] md:leading-[38px] text-text-gray md:text-black">資深UIUX設計師</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: 2020-2022 -->
+              <div class="flex items-start md:items-center gap-4 md:gap-6">
+                <div class="w-[10px] h-[10px] rounded-full bg-accent-blue shrink-0 relative z-10 mt-2 md:mt-0"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-16 flex-1">
+                  <span class="text-[16px] md:text-[26px] font-normal leading-[20px] md:leading-[31px] text-black shrink-0">2020-2022</span>
+                  <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 flex-1">
+                    <span class="md:w-[400px] text-[24px] md:text-[30px] font-sf font-light leading-[32px] md:leading-[40px] text-black md:shrink-0">禾相有限公司</span>
+                    <span class="flex-1 md:text-right text-[20px] md:text-[26px] font-sf font-light leading-[28px] md:leading-[38px] text-text-gray md:text-black">資深UIUX設計師</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: 2019-2020 -->
+              <div class="flex items-start md:items-center gap-4 md:gap-6">
+                <div class="w-[10px] h-[10px] rounded-full bg-accent-blue shrink-0 relative z-10 mt-2 md:mt-0"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-16 flex-1">
+                  <span class="text-[16px] md:text-[26px] font-normal leading-[20px] md:leading-[31px] text-black shrink-0">2019-2020</span>
+                  <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 flex-1">
+                    <span class="md:w-[400px] text-[24px] md:text-[30px] font-sf font-light leading-[32px] md:leading-[40px] text-black md:shrink-0">振作國際有限公司</span>
+                    <span class="flex-1 md:text-right text-[20px] md:text-[26px] font-sf font-light leading-[28px] md:leading-[38px] text-text-gray md:text-black">網頁設計師</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4: 2017-2019 -->
+              <div class="flex items-start md:items-center gap-4 md:gap-6">
+                <div class="w-[10px] h-[10px] rounded-full bg-accent-blue shrink-0 relative z-10 mt-2 md:mt-0"></div>
+                <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-16 flex-1">
+                  <span class="text-[16px] md:text-[26px] font-normal leading-[20px] md:leading-[31px] text-black shrink-0">2017-2019</span>
+                  <div class="flex flex-col md:flex-row md:items-center gap-1 md:gap-6 flex-1">
+                    <span class="md:w-[400px] text-[24px] md:text-[30px] font-sf font-light leading-[32px] md:leading-[40px] text-black md:shrink-0">創璟國際品牌顧問</span>
+                    <span class="flex-1 md:text-right text-[20px] md:text-[26px] font-sf font-light leading-[28px] md:leading-[38px] text-text-gray md:text-black">品牌設計師</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View Resume Button -->
+        <a href="https://gamma.app/docs/UIUX--mnhhgsgqlexf5ez" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 py-2 border-b border-black hover:opacity-70 transition-opacity">
+          <span class="text-[18px] md:text-[22px] font-medium leading-6 md:leading-7 text-text-dark">觀看完整履歷</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="-rotate-[30deg]">
+            <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#06f"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaborations / Services Section -->
+  <section class="border-t border-border-gray py-[60px] md:py-[100px] px-7 md:px-[71.5px]">
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-6">
+      <!-- Section Header -->
+      <div class="reveal flex items-center gap-2">
+        <span class="text-[30px] md:text-[36px] font-light leading-[40px] md:leading-[45px] text-black">Collaborations</span>
+        <span class="text-[18px] md:text-[26px] font-sf font-light leading-[22px] md:leading-[31px] text-text-gray">服務項目</span>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full h-px bg-black"></div>
+
+      <!-- Content -->
+      <div class="reveal flex md:justify-end" style="transition-delay: 0.15s">
+        <div class="w-full flex flex-col md:items-end gap-6">
+          <p class="w-full lg:w-[848px] text-[20px] md:text-[30px] font-light leading-[32px] md:leading-[49px] text-black">
+            透過深度的策略思考與視覺轉化，我與客戶並肩同行，將複雜的需求轉化為簡單而深刻的品牌記憶。
+          </p>
+
+          <!-- Service Tags -->
+          <div class="w-full lg:w-[848px]">
+            <div class="flex flex-wrap gap-3 md:gap-5">
+              <span class="px-4 py-1 bg-white border border-accent-blue rounded-lg text-[14px] md:text-[16px] font-sf font-normal leading-7 text-black">視覺策略</span>
+              <span class="px-4 py-1 bg-white border border-accent-blue rounded-lg text-[14px] md:text-[16px] font-sf font-normal leading-7 text-black">品牌設計</span>
+              <span class="px-4 py-1 bg-white border border-accent-blue rounded-lg text-[14px] md:text-[16px] font-sf font-normal leading-7 text-black">網站設計</span>
+              <span class="px-4 py-1 bg-white border border-accent-blue rounded-lg text-[14px] md:text-[16px] font-sf font-normal leading-7 text-black">APP設計</span>
+              <span class="px-4 py-1 bg-white border border-accent-blue rounded-lg text-[14px] md:text-[16px] font-sf font-normal leading-7 text-black">使用者研究</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="bg-black py-[60px] md:py-[120px] px-7 md:px-[71.5px] relative">
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-8 md:gap-10">
+      <!-- Title -->
+      <h2 class="reveal text-[28px] md:text-[55px] font-light leading-[36px] md:leading-[60px] tracking-[-1px] md:tracking-[-3px] text-white">
+        Where to Find Me 去哪裡找到我
+      </h2>
+
+      <!-- Contact Info -->
+      <div class="reveal flex flex-col gap-6 md:gap-8" style="transition-delay: 0.15s">
+        <span class="text-[14px] md:text-[17px] font-bold leading-4 uppercase tracking-wide text-accent-blue">Get in touch</span>
+        <a href="mailto:de0933@gmail.com" class="inline-flex items-center gap-2 md:gap-3 text-[20px] md:text-[36px] font-light leading-7 md:leading-10 text-white border-b border-white pb-1 self-start hover:text-accent-blue hover:border-accent-blue transition-colors">
+          <span>You can Email me</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="-rotate-[30deg] shrink-0 md:w-10 md:h-10">
+            <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="#FFFFFF"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="flex md:justify-end mt-4 md:mt-8">
+        <p class="text-sm md:text-base font-light text-text-gray">
+          Designed and built by Dee &copy;All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Character Illustration - Fixed Bottom Right -->
+  <a id="fixed-character" href="mailto:de0933@gmail.com" class="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-50 hover:opacity-80 opacity-0 pointer-events-none transition-opacity duration-500">
+    <img src="image/pic001.svg" alt="Character" class="w-auto h-auto max-w-[220px] md:max-w-[320px]">
+  </a>
+
+  <!-- Hamburger Menu Toggle -->
+  <script>
+    (function() {
+      var hamburgerBtn = document.getElementById('hamburger-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var lines = hamburgerBtn.querySelectorAll('.hamburger-line');
+      var isOpen = false;
+
+      hamburgerBtn.addEventListener('click', function() {
+        isOpen = !isOpen;
+        if (isOpen) {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100');
+          // Animate to X
+          lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+          lines[0].style.background = 'white';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+          lines[2].style.background = 'white';
+        } else {
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.remove('opacity-100');
+          // Animate back to hamburger
+          lines[0].style.transform = '';
+          lines[0].style.background = '';
+          lines[1].style.opacity = '';
+          lines[2].style.transform = '';
+          lines[2].style.background = '';
+        }
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.mobile-menu-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          isOpen = false;
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.remove('opacity-100');
+          lines[0].style.transform = '';
+          lines[0].style.background = '';
+          lines[1].style.opacity = '';
+          lines[2].style.transform = '';
+          lines[2].style.background = '';
+        });
+      });
+    })();
+  </script>
+
+  <!-- Smooth Scroll -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (!target) return;
+        const start = window.scrollY;
+        const end = target.getBoundingClientRect().top + start;
+        const duration = 1200;
+        let startTime = null;
+        function ease(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          window.scrollTo(0, start + (end - start) * ease(progress));
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    });
+
+    // Fixed character - show on scroll
+    (function() {
+      var character = document.getElementById('fixed-character');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+          character.classList.remove('opacity-0', 'pointer-events-none');
+          character.classList.add('opacity-100');
+        } else {
+          character.classList.add('opacity-0', 'pointer-events-none');
+          character.classList.remove('opacity-100');
+        }
+      });
+    })();
+
+    // Draggable cards
+    (function() {
+      var activeCard = null;
+      var startClientX, startClientY;
+      var offsetX = 0, offsetY = 0;
+      var baseTransform = '';
+      var rafId = null;
+      var draggableCards = document.querySelectorAll('.draggable-card');
+
+      function onStart(e) {
+        activeCard = this;
+        var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        startClientX = clientX;
+        startClientY = clientY;
+
+        // Get existing CSS transform (rotate, scaleX, etc.)
+        var computed = window.getComputedStyle(activeCard);
+        var matrix = computed.transform;
+        baseTransform = (matrix && matrix !== 'none') ? matrix : '';
+
+        // Read any previous drag offset
+        var prevX = parseFloat(activeCard.dataset.dragX) || 0;
+        var prevY = parseFloat(activeCard.dataset.dragY) || 0;
+        offsetX = prevX;
+        offsetY = prevY;
+
+        activeCard.style.cursor = 'grabbing';
+        activeCard.style.zIndex = '5';
+        activeCard.style.willChange = 'transform';
+        activeCard.style.boxShadow = '0 8px 30px rgba(0,0,0,0.2)';
+        e.preventDefault();
+      }
+
+      function onMove(e) {
+        if (!activeCard) return;
+        e.preventDefault();
+        var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        var clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        var dx = clientX - startClientX;
+        var dy = clientY - startClientY;
+
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(function() {
+          if (!activeCard) return;
+          var totalX = offsetX + dx;
+          var totalY = offsetY + dy;
+          activeCard.style.transform = 'translate(' + totalX + 'px, ' + totalY + 'px) ' + baseTransform;
+          activeCard.dataset.dragX = totalX;
+          activeCard.dataset.dragY = totalY;
+        });
+      }
+
+      function onEnd() {
+        if (!activeCard) return;
+        if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        activeCard.style.cursor = 'grab';
+        activeCard.style.zIndex = '';
+        activeCard.style.boxShadow = '';
+        activeCard.style.willChange = '';
+        activeCard = null;
+      }
+
+      draggableCards.forEach(function(card) {
+        card.addEventListener('mousedown', onStart);
+        card.addEventListener('touchstart', onStart, { passive: false });
+      });
+
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onEnd);
+      document.addEventListener('touchmove', onMove, { passive: false });
+      document.addEventListener('touchend', onEnd);
+    })();
+
+    // Scroll reveal animation
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      reveals.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+  </script>
+
+</body>
+</html>
